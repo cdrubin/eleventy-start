@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{% if title %}{{ title }} | {% endif %}eleventy-start</title>
+<meta name="description" content="eleventy-start">
+
+<meta property="og:title" content="eleventy-start">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://">
+<meta property="og:description" content="eleventy-start description">
+
+<link rel="icon" href="/img/favicon.ico">
+
+<link rel='shortcut icon' type='image/x-icon' href='/img/favicon.ico' />
+<link rel="stylesheet" type="text/css" href="/css/site.css" />
+
+<link rel="preload" href="/css/katex.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/katex.min.css"></noscript>
+
+</head>
+
+<body>
+
+{{ content | latex | safe }}
+
+</body>
+</html>

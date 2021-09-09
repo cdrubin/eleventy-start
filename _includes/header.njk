@@ -1,0 +1,15 @@
+{% set items = [
+  { 'About': '/about/' }
+] -%}
+
+<a class="logo" href="/">eleventy-start</a>
+
+<ul id="inline_header_navigation">
+{% for item in items -%}
+{% for name, link in item -%}
+<li><a {% if link in page.url -%}class="active" {% endif -%}{% if 'http' in link -%}target="_blank" rel="noopener" {% endif -%}href="{{ link }}">{{ name }}</a></li>
+{% endfor -%}
+{% endfor -%}
+</ul>
+
+

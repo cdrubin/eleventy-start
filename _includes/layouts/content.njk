@@ -1,0 +1,28 @@
+---
+layout: base
+---
+
+<div class="wrapper" id="wide">
+
+<header class="header">
+{% include 'header.njk' %}
+</header>
+
+<main class="content" style="margin-left: 10vw; margin-right: 10vw">
+
+<h1>{{ title }}</h1>
+
+{{ content | latex | safe }}
+
+</main>
+
+<aside class="sidebar" id="sidebar">
+  {{ content | toc | safe }}
+</aside>
+
+<footer class="footer">
+{% include 'footer.njk' %}
+</footer>
+
+</div>
+

@@ -2,53 +2,51 @@ body {
   margin: 0 0 0 0;
 }
 
-.header {
+header {
+  padding-left: 2rem;
   grid-area: header;
   display: flex;
   align-items: center;
   height: 3.8rem;
-  background-color: white;
+  background-color: #bbb;
   border-bottom: 2px solid #f0f0f0;
   position: sticky;
   top: 0;
 }
-
-.sidebar {
-  grid-area: sidebar;
-  z-index: -1;
+header li {
+  display: inline;
+  margin-left: 2rem;
 }
 
-/* keep sidebar in view even as screen scrolls */
-.sidebar nav {
-  border-left: 2px solid #f0f0f0;
-  list-style-type: none;
-  position: sticky;
-  top: 4.8rem;
+
+nav.toc {
+  margin: 2rem;
 }
 
-.sidebar ol {
+nav.toc ol {
   list-style-type: none;
 }
-.sidebar li {
+nav.toc li {
   margin-top: 1rem;
 }
-.sidebar nav a {
+nav.toc a {
   font-size: 0.8rem;
-  color: #a6aaaf;
+  color: grey;
 }
-
-.sidebar nav a:hover, .sidebar nav a.active, .sidebar nav a.current {
-  color: #f38020;
+nav.toc a:hover, .sidebar nav a.active, .sidebar nav a.current {
+  color: blue;
   transition: color 0.5s;
 }
 
+main {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 
-
-/* footer */
-.footer {
+footer {
   grid-area: footer;
   color: white;
-  background-color: green;
+  background-color: #999;
   height: 4rem;
   display: flex;
   align-items: center;
@@ -56,6 +54,6 @@ body {
   width: 100vw;
 }
 
-.footer span {
+footer span {
   padding: 1rem;
 }

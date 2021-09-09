@@ -8,17 +8,17 @@ layout: base
 {% include 'header.njk' %}
 </header>
 
-<main class="content" style="margin-left: 10vw; margin-right: 10vw">
+<nav class="toc" id="toc">
+  {{ content | toc | safe }}
+</nav>
+
+<main class="content">
 
 <h1>{{ title }}</h1>
 
 {{ content | latex | safe }}
 
 </main>
-
-<aside class="sidebar" id="sidebar">
-  {{ content | toc | safe }}
-</aside>
 
 <footer class="footer">
 {% include 'footer.njk' %}

@@ -8,3 +8,10 @@ About page
 <h2>A page heading</h2>
 
 <h2>And another</h2>
+
+<h2>California weather warnings</h2>
+<ul>
+{% for warning in warnings %}
+  <li>{{ warning }}</li>
+{% endfor %}
+</ul>
